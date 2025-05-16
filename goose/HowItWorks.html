@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smart Goose Deterrent System</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+          content="smart goose deterrent system - SGDS How It Works- a system that uses AI and image recognition to keep geese away, developed by Andrew Roy">
+    <meta name="keywords"
+          content="SGDS How It Works, goose, AI, image recognition, deterrent, goose poop, goose repellent, goose control, irowbot, Andrew Roy, pest repellent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="resources/rower-icon.png" sizes="32x32"/>
+    <link rel="stylesheet" type="text/css" href="resources/goose.css">
+    <script src="resources/slideshow.js"></script>
+    <script src="resources/goose.js"></script>
+</head>
+
+<body>
+
+<header id="idHeader">
+    <img id="idLogo" class="myLogo" alt="smart goose deterrent system logo" src="resources/logo.png" title="SGDS"
+         onclick="window.location.href='SGDS.html'">
+    <p>&nbsp;&nbsp;Smart Goose Deterrent System</p>
+</header>
+
+<nav>
+    <a href='SGDS.html'>SGDS</a>
+    <a href='HowItWorks.html'>How it Works</a>
+    <a href='FAQ.html'>FAQ</a>
+    <a href='2024.html'>2024</a>
+    <a href='OtherSystems.html'>Other Systems</a>
+    <a href='InTheNews.html'>In The News</a>
+    <a href='Contact.html'>Contact</a>
+</nav>
+
+<div class="padSides">
+
+    <h2><span class="title">How SGDS Works</span></h2>
+    <p class="whitespace">&nbsp;</p>
+    <p class="whitespace">&nbsp;</p>
+
+    <h2 class="mySection">Solution</h2>
+    <p>The Smart Goose Deterrent System captures a photo every few seconds and sends it to the cloud. Photos are
+        processed using motion detection, Image Recognition, and AI. If SGDS finds geese, it activates sprinklers.
+        If it finds people or nothing of interest, it disables sprinklers. </p>
+    <p><img class="myimg" alt="smart goose deterrent system diagram" src="images/diagram.png" title="SGDS"></p>
+    <p class="whitespace">&nbsp;</p>
+
+    <h2 class="mySection">Image Recognition and AI</h2>
+    <p>Image Recognition and AI are pretty good at finding geese and people. SGDS adds pre and
+        postprocessing rules; so in the end, there is little risk of missing a goose or spraying a person.</p>
+    <p class="whitespace">&nbsp;</p>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1/4</div>
+            <img src="images/land.png" class="myimg" alt="geese found"/>
+            <div class="caption">geese identified</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2/4</div>
+            <img src="images/people.png" class="myimg" loading="lazy" alt="people found"/>
+            <div class="caption">people identified</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3/4</div>
+            <img src="images/geeseAtNight.png" class="myimg" loading="lazy" alt="geese at night"/>
+            <div class="caption">goose identified at night</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4/4</div>
+            <img src="images/systemOff.png" class="myimg" loading="lazy" alt="no SGDS"/>
+            <div class="caption">when SGDS is NOT used</div>
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <h2 class="mySection">No Humans Required</h2>
+    <p>We believe humans are the weakest link in <a href="OtherSystems.html">other</a> goose deterrent systems.
+        They forget to perform regular tasks. That's why SGDS requires no human support. It is completely automatic
+        and runs 24/7.</p>
+    <p class="whitespace">&nbsp;</p>
+    <p class="whitespace">&nbsp;</p>
+
+    <h2 class="mySection">Sprinklers</h2>
+    <p>Sprinklers are an effective and humane deterrent. Geese do NOT like being sprayed!</p>
+    <video class="myVideo" controls loop autoplay muted>
+        <source src="images/HeyHeyHey.mp4" type="video/mp4">
+        Your browser does not support HTML video.
+    </video>
+    <p class="whitespace">&nbsp;</p>
+    <p class="whitespace">&nbsp;</p>
+    <p class="whitespace">&nbsp;</p>
+    <p class="whitespace">&nbsp;</p>
+    <p class="whitespace">&nbsp;</p>
+
+</div>
+
+<button onclick="topFunction()" id="btnGotoTop" title="Go to top">goto top</button>
+
+<footer>
+    <div>
+        <img id="idImgRowbot" src="resources/home.png" alt="rowbot" title="IRowbot Home" class="footerImage"
+             onclick="window.location='/'">
+        <span>&nbsp;</span>
+    </div>
+</footer>
+
+<script>
+    window.onload = function() {resizeLogo()};
+    window.onresize = function() {resizeLogo()};
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    window.onscroll = function() {scrollFunction()};
+</script>
+
+</body>
+
+</html>
