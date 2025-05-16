@@ -1,1 +1,217 @@
-hello andy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>iRowBot</title>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "iRowBot",
+            "alternateName": ["Smart Goose Deterrent System", "SGDS"],
+            "url": "https://irowbot.duckdns.org:1776/"
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="description"
+          content="smart goose deterrent system - SGDS irowbot- a system that uses AI and image recognition to keep geese away, developed by Andrew Roy">
+    <meta name="keywords"
+          content="SGDS irowbot, goose, AI, image recognition, deterrent, goose poop, goose repellent, goose control, irowbot, Andrew Roy, pest repellent">
+    <meta name="author" content="Andrew Roy">
+    <meta name="google-site-verification" content="njr4L-I9XE5NkVggkVUqC-9rbkDz0cW-9gSrhihqf3Y" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="resources/rower-icon.png" sizes="32x32"/>
+    <link rel="stylesheet" type="text/css" href="resources/commonStyle.css">
+    <style type="text/css">
+
+        p{
+            font: 90% Arial, Helvetica, sans-serif;
+            text-align: left;
+        }
+
+        .myGrid1 {
+          display: grid;
+          column-gap: 10px;
+          grid-template-columns: auto auto;
+          padding: 10px;
+        }
+        .myGrid2 {
+          display: grid;
+          column-gap: 10px;
+          grid-template-columns: auto auto auto auto;
+          padding: 10px;
+        }
+        .myGrid1 > div, .myGrid2 > div {
+          background-color: #f1f1f1;
+          border: 1px solid rgba(170,183,184,0.99);;
+          border-radius: 10px;
+          padding: 10px;
+          text-align: center;
+        }
+        .myGrid1 > div:hover , .myGrid2 > div:hover {
+            background-color: rgba(170,183,184,0.99);
+            color: black
+        }
+        .myPhoto > img {
+          object-fit: cover;
+          width: 100%;
+          max-height: 100%;
+        }
+
+        /*modal popup window (gray outer border) */
+        .myModalWindow {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        .myModalContent {
+          background-color: #fefefe;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 70%;
+          max-height: 80vh;
+          overflow-y: auto; /* Enable scroll if needed */
+        }
+        @media (max-width: 440px) {
+            .myModalContent{
+                width: 85%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Welcome to <i>iRowBot</i></h2>
+</header>
+<br>
+
+<div class="myGrid1">
+    <div class="myPhoto" onclick="location.href='goose/SGDS.html';">
+        <h3>Smart Goose Deterrent System</h3>
+        <img src="resources/sgds.jpg" alt="smart goose deterrent system diagram"
+             title="smart goose deterrent system diagram"/>
+    </div>
+    <div class="myPhoto" onclick="openPopupWindow('idIrowbot')">
+        <h3>Concept 2 Erg Hack</h3>
+        <img src="resources/irowbotMap.jpg" alt="irowbot online rowing" title="irowbot online rowing"/>
+    </div>
+</div>
+
+<div class="myGrid2">
+    <div class="myPhoto" onclick="openPopupWindow('idSolar')">
+        <h5>Solar Water Heater</h5>
+        <img src="resources/solar.jpg" alt="Solar Water Heater"/>
+    </div>
+    <div class="myPhoto" onclick="openPopupWindow('idThermostat')">
+        <h5>Thermostat</h5>
+        <img src="resources/thermostat.jpg" alt="Thermostat"/>
+    </div>
+    <div class="myPhoto" onclick="openPopupWindow('idBionic')">
+        <h5>Bionic Finger</h5>
+        <img src="resources/bionicFinger.jpg" alt="Bionic Finger"/>
+    </div>
+    <div class="myPhoto" onclick="openPopupWindow('idHeatpump')">
+        <h5>Heat Pump Controller</h5>
+        <img src="resources/heatpump.jpg" alt="Heat Pump Controller"/>
+    </div>
+</div>
+
+<div id="idIrowbot" class="myModalWindow">
+    <div class="myModalContent">
+        <h2 id="irowbot">IRowBot Erg Hack</h2>
+        <p>online virtual rowing experience</p>
+        <button type="button" onclick="closePopupWindow('idIrowbot')">Close</button>
+    </div>
+</div>
+
+<div id="idSolar" class="myModalWindow">
+    <div class="myModalContent">
+        <h2 id="solar">Solar Water Heater</h2>
+        <p>When I was a boy scout, I got the Energy Merit Badge. I will never forget a trip we took to see a house
+            that was heated with a homemade solar heating system. It used tin cans, fans, and stones. </p>
+        <p>About 15 years ago I decided to build my own solar water heater. A solar panel and water storage tank
+            were built from parts you could find at Home Depot: copper pipes, pex tubing, aluminum flashing, a
+            rubber pond liner, insulation, wood, ... A controller was built with an Arduino, temperature
+            sensors, a relay, and a fish tank pump. The controller pumps water through the solar panel when the
+            temperature in the panel is warmer than the temperature in the storage tank.
+        </p>
+        <button type="button" onclick="closePopupWindow('idSolar')">Close</button>
+    </div>
+</div>
+
+<div id="idThermostat" class="myModalWindow">
+    <div class="myModalContent">
+        <h2 id="thermostat">Thermostat</h2>
+        <p>Soon after the first programmable thermostats came out, I decided to build my own. First with an Arduino,
+            then with a Raspberry Pi, and currently with an ESP32. My partner wanted to be able to turn on the heat
+            with her smartphone before getting out of bed. Among the standard features you would expect in a smart
+            thermostat, I also added a graph that shows indoor temperature, target temperature, and every time the
+            furnace cycles on and off over a two day period. It gives you an idea of how well your house holds heat.
+        </p>
+        <button type="button" onclick="closePopupWindow('idThermostat')">Close</button>
+    </div>
+</div>
+
+<div id="idBionic" class="myModalWindow">
+    <div class="myModalContent">
+        <h2 id="bionic">Bionic Finger</h2>
+        <p>One of my favorite TV shows as a kid was <a href="https://en.wikipedia.org/wiki/The_Six_Million_Dollar_Man"
+                                                       target="_blank">The Six Million Dollar
+            Man.</a> It was about a man that had two legs, an arm, and an eye replaced with bionic implants. They gave
+            him superhuman strength. It inspired me, in part, to become a biomedical engineer. At my first real job, I
+            was fortunate to work for a lab that developed the first viable EMG controlled prosthetic arm. We spent
+            hundreds of thousands of dollars on equipment to build out our lab.</p>
+        <p>Over the years I have watched computers
+            get smaller, more powerful, and cheaper. Recently, I felt compelled to build a bionic finger. I used a
+            copper penny and an amplifier chip to create an electrode. I used an Arduino to capture and process EMG
+            signals. The Arduino controls a servo attached to springs and pulleys that articulate a lego finger. All
+            this was for less than $10 (a $5,999,990 savings)!
+        </p>
+        <button type="button" onclick="closePopupWindow('idBionic')">Close</button>
+    </div>
+</div>
+
+<div id="idHeatpump" class="myModalWindow">
+    <div class="myModalContent">
+        <h2 id="heatpump">Heat Pump Controller</h2>
+        <p>In 2023 I replaced a 40 year old central AC system in my home with a heat pump and several indoor air
+            handlers. I found it much cheaper to do this work myself, even though I was eligible for huge rebates
+            if I hired professionals. The heat pump brand that I chose wanted $200 per air handler to add wifi
+            control capabilities. I built my own wifi controllers using ESP8266 microcontrollers and open source code. I
+            was even able to figure out how to add voice control.
+        </p>
+        <button type="button" onclick="closePopupWindow('idHeatpump')">Close</button>
+    </div>
+
+</div>
+<div>
+    <br>
+    <a href="mailto: andrew.m.roy@gmail.com?subject=SGDS">andrew.m.roy@gmail.com</a>
+</div>
+
+<script>
+
+    function openPopupWindow(idWindow){
+        var element = document.getElementById(idWindow);
+        element.style.display = "block";
+    }
+
+    function closePopupWindow(idWindow){
+        var element = document.getElementById(idWindow);
+        element.style.display = "none";
+    }
+
+</script>
+</body>
+</html>
+
