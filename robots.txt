@@ -1,0 +1,4 @@
+Sitemap: https://smartgoose.us/sitemap.xml
+
+User-agent: *
+
