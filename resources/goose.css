@@ -94,6 +94,18 @@ nav a:hover {
     margin:auto;
 }
 
+
+.myVideoSmall{
+    width:50%;
+    display:block;
+    margin:auto;
+}
+@media (max-width: 440px) {
+    .myVideoSmall{
+        width:100%
+    }
+}
+
 .whitespace {
     margin-top: 0em;
     margin-bottom: 0em;
