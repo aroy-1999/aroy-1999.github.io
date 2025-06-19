@@ -98,7 +98,7 @@ nav a:hover {
 .myVideoSmall{
     width:50%;
     display:block;
-    margin:auto;
+    margin:left;
 }
 @media (max-width: 440px) {
     .myVideoSmall{
