@@ -11,7 +11,7 @@
             <video:thumbnail_loc>https://smartgoose.us/images/logo.png</video:thumbnail_loc>
             <video:title>SGDS uses AI to spray goose</video:title>
             <video:description>
-                Smart Goose Deterrent System uses AI to find, then spay geese
+                Smart Goose Deterrent System uses AI to find, then spray geese
             </video:description>
             <video:content_loc>
                 https://smartgoose.us/images/ByeByeBirdie.mp4
@@ -21,13 +21,13 @@
             <video:restriction relationship="allow">IE GB US CA</video:restriction>
             <video:live>no</video:live>
         </video:video>
-        <lastmod>2025-05-19</lastmod>
+        <lastmod>2025-08-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://smartgoose.us/FAQ.html</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -43,7 +43,7 @@
             <video:thumbnail_loc>https://smartgoose.us/images/logo.png</video:thumbnail_loc>
             <video:title>SGDS uses AI to spray goose</video:title>
             <video:description>
-                Smart Goose Deterrent System uses AI to find, then spay geese
+                Smart Goose Deterrent System uses AI to find, then spray geese
             </video:description>
             <video:content_loc>
                 https://smartgoose.us/images/HeyHeyHey.mp4
@@ -53,31 +53,31 @@
             <video:restriction relationship="allow">IE GB US CA</video:restriction>
             <video:live>no</video:live>
         </video:video>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://smartgoose.us/Blog.html</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://smartgoose.us/InTheNews.html</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://smartgoose.us/OtherDeterrents.html</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://smartgoose.us/Contact.html</loc>
-        <lastmod>2025-05-18</lastmod>
+        <lastmod>2025-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.1</priority>
     </url>
