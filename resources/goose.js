@@ -21,13 +21,13 @@ function topFunction() {
 
 function resizeLogo(){
     const header = document.getElementById("idHeader");
-    y = header.offsetHeight-14;
+    y = header.offsetHeight-10;
     newSize = y.toString() + "px";
 
     const image = document.getElementById("idLogo");
     image.style.height = newSize;
     image.style.width = newSize;
-    image.style.top = "7px";
-    image.style.left = "7px";
+    image.style.top = "5px";
+    image.style.left = "5px";
     image.style.display = "block";
 }
