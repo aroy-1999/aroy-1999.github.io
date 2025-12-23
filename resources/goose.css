@@ -88,6 +88,14 @@ nav a:hover {
   margin:auto;
 }
 
+.myimgMedium {
+  max-width:60%;
+  height:auto;
+  max-height:60%;
+  display:block;
+  margin:auto;
+}
+
 .myVideo{
     width:85%;
     display:block;
