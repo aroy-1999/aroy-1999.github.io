@@ -102,12 +102,12 @@ nav a:hover {
     margin:auto;
 }
 
-
 .myVideoSmall{
     width:50%;
     display:block;
     margin:left;
 }
+
 @media (max-width: 440px) {
     .myVideoSmall{
         width:100%
