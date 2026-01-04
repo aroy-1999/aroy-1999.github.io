@@ -1,9 +1,11 @@
 
 :root {
   --nav-height: 125px;
+  --footer-height: 30px;
+  --footer-padding: 4px;
   --toc-width: 220px;
   --thumb-width: 160px;
-  --footer-height: 60px;
+
   --border: #e5e7eb;
   --link: #2563eb;
   --text: #333333;
@@ -38,10 +40,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 2em 5px 10px; /* top | right | bottom | left */
-  /*background: white;
-  border-bottom: 1px solid var(--border);
-  */
+  padding: 5px 10px 5px 5px; /* top | right | bottom | left */
   z-index: 1000;
   background-color: rgba(21,67,96,0.99);
   border-radius: 3px;
@@ -49,7 +48,6 @@ body {
 
 .top-nav .myLogo {
     display: flex;
-    /*align-items: center;*/
 }
 
 .myLogo {
@@ -64,7 +62,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-
 }
 
 .top-nav a {
@@ -73,19 +70,19 @@ body {
 }
 
 .top-nav a:hover {
-   border-radius: 2px;
+   border-radius: 3px;
    background-color: rgba(36,113,163,0.99);
    color: black;
 }
 
 /* ---------- Layout ---------- */
 .page {
-  display: grid;
-  grid-template-columns: var(--toc-width) 1fr var(--thumb-width);
-  min-height: calc(100vh - var(--nav-height));
+    display: grid;
+    flex: 1;
+    grid-template-columns: 0.7fr 3fr 0.5fr;
 }
 
-/* ---------- Table of Contents ---------- */
+/* ---------- left - Table of Contents ---------- */
 aside.toc {
   position: sticky;
   top: var(--nav-height);
@@ -98,8 +95,6 @@ aside.toc {
 
 .toc h3 {
   font-size: 90%;
-  text-transform: uppercase;
-  color: var(--muted);
 }
 
 .toc ul {
@@ -114,38 +109,50 @@ aside.toc {
 .toc a {
   text-decoration: none;
   color: var(--link);
-  font-size: 0.95rem;
+  font-size: 90%;
 }
 
 .toc a:hover{
   color: blue;
 }
 
-/* ---------- Content ---------- */
+/* ---------- center - Main Content ---------- */
 main {
   padding: 0.5rem 2rem;
-  max-width: 800px;
-}
-
-header h1 {
-  margin-top: 0;
-  font-size: 2.3rem;
+  max-width: calc(vw - var(toc-width) - var(--thumb-width) );
 }
 
 section {
-  margin-top: 3rem;
+  margin-top: 2rem;
   scroll-margin-top: calc(var(--nav-height) + 1rem);
 }
 
-section h2 {
-  font-size: 1.5rem;
+section h1 {
+  font-size: 160%;
 }
 
-/* ---------- Thumbnails ---------- */
+section h2 {
+  font-size: 140%;
+}
+
+.myVideo{
+    width:90%;
+    display:block;
+    margin:auto;
+}
+
+.myimg {
+  max-width:90%;
+  height:auto;
+  display:block;
+  margin:auto;
+}
+
+/* ---------- right - Thumbnails ---------- */
 aside.thumbs {
   position: sticky;
   top: var(--nav-height);
-  height: calc(100vh - var(--nav-height));
+  height: calc(100vh - var(--nav-height) - var(--footer-height));
   padding: 1.25rem;
   border-left: 1px solid var(--border);
   background: var(--bg-light);
@@ -153,8 +160,6 @@ aside.thumbs {
 
 .thumbs h3 {
   font-size: 90%;
-  text-transform: uppercase;
-  color: var(--muted);
 }
 
 .thumbs img {
@@ -162,6 +167,7 @@ aside.thumbs {
   margin-bottom: 0.75rem;
   border-radius: 3px;
   cursor: pointer;
+  z-index: 50;
 }
 
 .thumbs img:hover {
@@ -169,23 +175,28 @@ aside.thumbs {
 }
 
 /* ---------- Footer ---------- */
-
-footer {
-    background-color: rgba(21,67,96,0.99);
+ footer {
+    background: rgba(21,67,96,0.99);
     border-radius: 3px;
-    padding: 5px;
-    text-align: right;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     font-size: 80%;
-    height = var(--footer-height);
-    z-index: 1000;
+    z-index: 100;
+    height: var(--footer-height);
 }
-.footerImage{
-    width: 25px;
-    height: 16px;
-    padding-left: 8px;
-    float: left;
+footer img {
+    width: auto;
+    height: calc( var(--footer-height) - 2 * var(--footer-padding) );
+    object-fit: cover;
+    /*border-radius: 3px;*/
     filter: invert(100%);
     cursor: pointer;
+    padding-top: calc(var(--footer-padding) + 1px);
+    padding-bottom: clc(var(--footer-padding) - 1px);
+    padding-left: 10px;
 }
 
 /* ---------- Responsive ---------- */
@@ -213,33 +224,16 @@ footer {
     }
     .top-nav {
         flex-wrap: wrap;
+        justify-content: center;
     }
     .top-nav a {
-        font-size: 60%;
+        font-size: 70%;
     }
     .myLogo{
         height: 40px;
         width: auto;
     }
-}
-
-.myimg {
-  max-width:90%;
-  height:auto;
-  max-height:90%;
-  display:block;
-  margin:auto;
-}
-
-
-.myVideoSmall{
-    width:90%;
-    display:block;
-    margin:left;
-}
-
-@media (max-width: 650px) {
-    .myVideoSmall{
+    .myVideo{
         width:100%
     }
 }
@@ -250,13 +244,13 @@ footer {
   position: fixed; /* Fixed/sticky position */
   bottom: 32px; /* Place the button at the bottom of the page */
   right: 20px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
+  z-index: 100; /* Make sure it is on top ov everything */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   background-color: rgba(26,82,118,0.99);
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 10px; /* Some padding */
+  padding: 10px; /* Some padding around text*/
   border-radius: 3px; /* Rounded corners */
   font-size: 80%; /* Increase font size */
 }
@@ -266,8 +260,3 @@ footer {
    color: black;
 }
 
-@media (max-width: 440px) {
-    #toTop{
-        right: 10px;
-    }
-}
