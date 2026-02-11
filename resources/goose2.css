@@ -204,7 +204,7 @@ aside.rght {
 }
 
 /* ---------- Footer ---------- */
- footer {
+footer {
     background: rgba(21,67,96,0.99);
     border-radius: 3px;
     color: white;
@@ -217,14 +217,13 @@ aside.rght {
     height: var(--footer-height);
 }
 .footer-left img {
-     width: auto;
+    width: auto;
     height: calc( var(--footer-height) - 2 * var(--footer-padding) );
     object-fit: cover;
-    /*border-radius: 3px;*/
     filter: invert(100%);
     cursor: pointer;
     padding-top: calc(var(--footer-padding) + 1px);
-    padding-bottom: clc(var(--footer-padding) - 1px);
+    padding-bottom: calc(var(--footer-padding) - 1px);
     padding-left: 10px;
 }
 
@@ -278,7 +277,7 @@ aside.rght {
   font-weight: bold;
   float: right;
   margin-left: 5px;
-  ext-align: right;
+  text-align: right;
 }
 .active:after {
   color: white;
