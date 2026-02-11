@@ -9,60 +9,85 @@
           content="SGDS Contact, goose, AI, image recognition, deterrent, goose poop, goose repellent, goose control, irowbot, Andrew Roy, pest repellent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/rower-icon.png" sizes="32x32"/>
-    <link rel="stylesheet" type="text/css" href="resources/goose.css">
-    <script src="resources/goose.js"></script>
+    <link rel="stylesheet" type="text/css" href="resources/goose2.css">
 </head>
 
 <body>
 
-<header id="idHeader">
-    <img id="idLogo" class="myLogo" alt="smart goose deterrent system logo" src="images/logo.png" title="SGDS"
+<!-- Top Nav -->
+<nav class="top-nav">
+    <img class="myLogo" alt="smart goose deterrent system logo" src="images/logo.png" title="SGDS"
          onclick="window.location.href='/'">
-    <p>&nbsp;&nbsp;Smart Goose Deterrent System</p>
-</header>
-
-<nav>
-    <a href='/'>SGDS</a>
-    <a href='HowItWorks.html'>How it Works</a>
-    <a href='FAQ.html'>FAQ</a>
-    <a href='Blog.html'>Blog</a>
-    <a href='OtherDeterrents.html'>Other Deterrents</a>
-    <a href='InTheNews.html'>In The News</a>
-    <a href='Contact.html'>Contact</a>
+    <ul>
+        <li></li>
+        <li><a href='/'>Home</a></li>
+        <li><a href='HowItWorks.html'>How it Works</a></li>
+        <li><a href='Blog.html'>Blog</a></li>
+        <li><a href='InTheNews.html'>In The News</a></li>
+        <li><a href='OtherDeterrents.html'>Other Deterrents</a></li>
+        <li><a href='FAQ.html'>FAQ</a></li>
+        <li><a href='Contact.html'>Contact</a></li>
+        <li><a href='Contact.html'> </a></li>
+    </ul>
 </nav>
 
-<div class="padSides">
+<!-- Page -->
+<div class="page">
 
-    <h1><span class="title">SGDS Contact</span></h1>
-    <p class="whitespace">&nbsp;</p>
-    <p class="whitespace">&nbsp;</p>
+    <!-- left margin -->
+    <aside class="lft">
+    </aside>
 
-    <div style="text-align: center">
-        <p><span>Would you like more information? We encourage you to contact us about the Smart Goose Deterrent System and our services.</span>
-        </p>
-        <p class="whitespace">&nbsp;</p>
-        <p><span><b>Location</b></span></p>
-        <p><span>Boston, MA</span></p>
-        <p class="whitespace">&nbsp;</p>
-        <p><span><b>Email</b></span></p>
-        <p><a href="mailto: andrew.m.roy@gmail.com?subject=SGDS">andrew.m.roy@gmail.com</a></p>
-    </div>
-    <p class="whitespace">&nbsp;</p>
+    <!-- center Content -->
+    <main>
+
+        <div style="text-align: center">
+            <h1><span class="title">SGDS Contact</span></h1>
+            <p class="whitespace">&nbsp;</p>
+            <p><span>Would you like more information? We encourage you to contact us about the Smart Goose Deterrent System and our services.</span>
+            </p>
+            <p class="whitespace">&nbsp;</p>
+            <p><span><b>Location</b></span></p>
+            <p><span>Boston, MA</span></p>
+            <p class="whitespace">&nbsp;</p>
+            <p><span><b>Email</b></span></p>
+            <p><a href="mailto: smart.goose.us@gmail.com?subject=SGDS">smart.goose.us@gmail.com</a></p>
+        </div>
+
+    </main>
+
+    <!-- right margin -->
+    <aside class="rght">
+    </aside>
+
 </div>
 
+
+<!-- Footer -->
 <footer>
-    <div>
+    <div class="footer-left">
         <img id="idImgRowbot" src="images/rowbot.png" alt="rowbot" title="IRowBot Home" class="footerImage"
              onclick="window.location.href='irowbot.html'">
-        <span>&nbsp;</span>
+    </div>
+    <div class="footer-right">
+        &copy; 2026 Smart Goose Deterrent System &nbsp; &nbsp;
     </div>
 </footer>
 
+<!-- Go To Top Button -->
+<button id="toTop" title="Go to top">goto top</button>
+
 <script>
-    window.onload = function() {resizeLogo()};;
-    window.onresize = function() {resizeLogo()};;
+    const btn = document.getElementById("toTop");
+
+    window.addEventListener("scroll", () => {
+      btn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 </script>
 
 </body>
-
 </html>
