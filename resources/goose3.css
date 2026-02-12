@@ -281,7 +281,7 @@ footer {
 
 .collapsible {
   color:white;
-  background-color: rgba(36,113,163,0.99);
+  background-color: #606060;
   cursor: pointer;
   padding: 10px;
   width: 100%;
@@ -293,7 +293,7 @@ footer {
 }
 .active, .collapsible:hover{
   color:white;
-  background-color: rgba(26,82,118,0.99);
+  background-color: #909090;
 }
 .collapsible:after {
   content: '\002B';
