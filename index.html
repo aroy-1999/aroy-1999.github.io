@@ -32,6 +32,12 @@
 </head>
 
 <body>
+<img class="goose" src="images/gooseSilhouette.png">
+<img class="goose" src="images/gooseSilhouette.png">
+<img class="goose" src="images/gooseSilhouette.png">
+<img class="goose" src="images/gooseSilhouette.png">
+<img class="goose" src="images/gooseSilhouette.png">
+<img class="goose" src="images/gooseSilhouette.png">
 
 <!-- Top Nav -->
 <nav class="top-nav">
@@ -130,6 +136,34 @@
 
     btn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    const thumbs = document.querySelectorAll(".goose");
+
+    thumbs.forEach((thumb, index) => {
+        let x = -Math.random() * 100;  // stagger starting positions
+        let speed = 0.1 + Math.random() * 0.3;       // slightly different speeds
+
+        function randomHeight() {
+            const maxHeight = window.innerHeight - thumb.offsetHeight;
+            return Math.random() * maxHeight;
+        }
+
+        thumb.style.top = randomHeight() + "px";
+
+        function animate() {
+            x += speed;
+
+            if (x > window.innerWidth) {
+                x = -thumb.offsetWidth;
+                thumb.style.top = randomHeight() + "px";
+            }
+
+            thumb.style.left = x + "px";
+            requestAnimationFrame(animate);
+        }
+
+        animate();
     });
 </script>
 

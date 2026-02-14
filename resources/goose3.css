@@ -43,6 +43,14 @@ body::before {
   z-index: -2;
 }
 
+.goose {
+    position: absolute;
+    width: 20px;
+    height: auto;
+    object-fit: cover;
+    z-index: 9999;
+}
+
 /* ---------- Top Navigation ---------- */
 .top-nav {
   position: sticky;
@@ -236,7 +244,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    z-index: 100;
+    z-index: 1000;
     height: var(--footer-height);
     margin: var(--footer-margin);
 }
