@@ -48,7 +48,7 @@ body::before {
     width: 20px;
     height: auto;
     object-fit: cover;
-    z-index: 100;
+    z-index: 9999;
 }
 
 /* ---------- Top Navigation ---------- */

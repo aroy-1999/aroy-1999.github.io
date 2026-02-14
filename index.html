@@ -37,7 +37,7 @@
 <img class="goose" src="images/gooseSilhouette.png">
 
 <!-- Top Nav -->
-<nav class="top-nav">
+<nav id="nav" class="top-nav">
     <img class="myLogo" alt="smart goose deterrent system logo" src="images/logo.png" title="SGDS"
          onclick="window.location.href='/'">
     <ul>
@@ -135,6 +135,7 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
+
     const thumbs = document.querySelectorAll(".goose");
 
     thumbs.forEach((thumb, index) => {
@@ -142,8 +143,8 @@
         let speed = 0.1 + Math.random() * 0.3;       // slightly different speeds
 
         function randomHeight() {
-            const maxHeight = window.innerHeight - thumb.offsetHeight;
-            return Math.random() * maxHeight;
+            const nav = document.getElementById('nav');
+            return Math.random() * nav.offsetHeight;
         }
 
         thumb.style.top = randomHeight() + "px";
