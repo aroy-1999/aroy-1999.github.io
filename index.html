@@ -29,6 +29,7 @@
     <meta property="og:logo" content="https://smartgoose.us/images/logo.png"/>
     <link rel="icon" type="image/png" href="images/rower-icon.png" sizes="32x32"/>
     <link rel="stylesheet" type="text/css" href="resources/goose3.css">
+    <script src="resources/goose3.js"></script>
 </head>
 
 <body>
@@ -125,44 +126,8 @@
 <button id="toTop" title="Go to top">goto top</button>
 
 <script>
-    const btn = document.getElementById("toTop");
-
-    window.addEventListener("scroll", () => {
-      btn.style.display = window.scrollY > 300 ? "block" : "none";
-    });
-
-    btn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-
-    const thumbs = document.querySelectorAll(".goose");
-
-    thumbs.forEach((thumb, index) => {
-        let x = -Math.random() * 100;  // stagger starting positions
-        let speed = 0.1 + Math.random() * 0.3;       // slightly different speeds
-
-        function randomHeight() {
-            const nav = document.getElementById('nav');
-            return Math.random() * nav.offsetHeight;
-        }
-
-        thumb.style.top = randomHeight() + "px";
-
-        function animate() {
-            x += speed;
-
-            if (x > window.innerWidth) {
-                x = -thumb.offsetWidth;
-                thumb.style.top = randomHeight() + "px";
-            }
-
-            thumb.style.left = x + "px";
-            requestAnimationFrame(animate);
-        }
-
-        animate();
-    });
+    initToTop();
+    initMovingGeese();
 </script>
 
 </body>

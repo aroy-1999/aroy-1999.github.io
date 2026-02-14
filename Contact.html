@@ -10,12 +10,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/rower-icon.png" sizes="32x32"/>
     <link rel="stylesheet" type="text/css" href="resources/goose3.css">
+    <script src="resources/goose3.js"></script>
 </head>
 
 <body>
+<img class="goose" src="images/gooseSilhouette.png">
+<img class="goose" src="images/gooseSilhouette.png">
+<img class="goose" src="images/gooseSilhouette.png">
 
 <!-- Top Nav -->
-<nav class="top-nav">
+<nav id="nav" class="top-nav">
     <img class="myLogo" alt="smart goose deterrent system logo" src="images/logo.png" title="SGDS"
          onclick="window.location.href='/'">
     <ul>
@@ -80,15 +84,8 @@
 <button id="toTop" title="Go to top">goto top</button>
 
 <script>
-    const btn = document.getElementById("toTop");
-
-    window.addEventListener("scroll", () => {
-      btn.style.display = window.scrollY > 300 ? "block" : "none";
-    });
-
-    btn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    initToTop();
+    initMovingGeese();
 </script>
 
 </body>

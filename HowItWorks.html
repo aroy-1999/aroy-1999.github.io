@@ -10,13 +10,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/rower-icon.png" sizes="32x32"/>
     <link rel="stylesheet" type="text/css" href="resources/goose3.css">
-
+     <script src="resources/goose3.js"></script>
 </head>
 
 <body>
+<img class="goose" src="images/gooseSilhouette.png">
+<img class="goose" src="images/gooseSilhouette.png">
+<img class="goose" src="images/gooseSilhouette.png">
 
 <!-- Top Nav -->
-<nav class="top-nav">
+<nav id="nav" class="top-nav">
     <img class="myLogo" alt="smart goose deterrent system logo" src="images/logo.png" title="SGDS"
          onclick="window.location.href='/'">
     <ul>
@@ -113,46 +116,10 @@
 <button id="toTop" title="Go to top">goto top</button>
 
 <script>
-
-    /* -------- to top ---------- */
-    const btn = document.getElementById("toTop");
-
-    window.addEventListener("scroll", () => {
-      btn.style.display = window.scrollY > 300 ? "block" : "none";
-    });
-
-    btn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    /* -------- slideshow ---------- */
+    initToTop();
+    initMovingGeese();
     let slideIndex = 0;
-    const slides = document.getElementsByClassName("slide");
-
-    function showSlide(index) {
-      if (index >= slides.length) slideIndex = 0;
-      if (index < 0) slideIndex = slides.length - 1;
-
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-
-      slides[slideIndex].style.display = "block";
-    }
-
-    function changeSlide(n) {
-      slideIndex += n;
-      showSlide(slideIndex);
-    }
-
-    // Auto play every 5 seconds
-    setInterval(() => {
-      slideIndex++;
-      showSlide(slideIndex);
-    }, 5000);
-
-    // Initialize
-    showSlide(slideIndex);
+    initSlideShow();
 </script>
 
 </body>
