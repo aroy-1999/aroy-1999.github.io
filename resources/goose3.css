@@ -1,18 +1,18 @@
 
 :root {
   --nav-height: 125px;
-  --footer-height: 30px;
+  --footer-height: 35px;
   --footer-padding: 4px;
   --footer-margin: 5px;
 
   --toc-width: 220px;
   --thumb-width: 160px;
 
-  --border: #ADAEB3;
-  --link: #2563eb;
-  --text: #333333;
-  --muted: #575b63;
-  --bg-light: #fafafa;
+  --left-right-border-color: #ADAEB3;
+  --link-color: #2563eb;
+  --body-text-color: #333333;
+  --nav-bar-color: #303030;
+  --nav-bar-highlight-color: #808080;
 }
 
 html {
@@ -24,13 +24,12 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
+  color: var(--body-text-color);
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #ffffff; /* fallback color */
   overflow-x: hidden;
 }
 
@@ -56,7 +55,7 @@ body::before {
   justify-content: space-between;
   padding: 5px 10px 5px 5px; /* top | right | bottom | left */
   z-index: 1000;
-  background-color: rgba(21,67,96,0.99);
+  background-color: var(--nav-bar-color);
   border-radius: 3px;
   margin: var(--footer-margin);
 }
@@ -86,7 +85,7 @@ body::before {
 
 .top-nav a:hover {
    border-radius: 3px;
-   background-color: rgba(36,113,163,0.99);
+   background-color: var(--nav-bar-highlight-color);
    color: black;
 }
 
@@ -116,9 +115,9 @@ aside.toc {
     top: var(--nav-height);
     height: calc(100vh - var(--nav-height) - var(--footer-height) -2 * var(--footer-margin));
     padding: 1.25rem;
-    border-right: 2px solid var(--border);
+    border-right: 2px solid var(--left-right-border-color);
     background: rgba(255,255,255,0.85);
-    border-radius = 3px;
+    border-radius: 3px;
     overflow-y: auto;
 }
 
@@ -137,7 +136,7 @@ aside.toc {
 
 .toc a {
   text-decoration: none;
-  color: var(--link);
+  color: var(--link-color);
   font-size: 90%;
 }
 
@@ -181,6 +180,7 @@ section h2 {
     width:90%;
     display:block;
     margin:auto;
+    border-radius: 3px;
 }
 
 .myimg {
@@ -188,6 +188,8 @@ section h2 {
   height:auto;
   display:block;
   margin:auto;
+  border: 8px solid var(--nav-bar-color);   /* Black border */
+  border-radius: 3px;
 }
 
 /* ---------- right - side ---------- */
@@ -203,9 +205,9 @@ aside.thumbs {
     top: var(--nav-height);
     height: calc(100vh - var(--nav-height) - var(--footer-height) -2 * var(--footer-margin));
     padding: 1.25rem;
-    border-left: 2px solid var(--border);
+    border-left: 2px solid var(--left-right-border-color);
     background: rgba(255,255,255,0.85);
-    border-radius = 3px;
+    border-radius: 3px;
 }
 
 .thumbs h3 {
@@ -216,6 +218,7 @@ aside.thumbs {
   width: 100%;
   margin-bottom: 0.75rem;
   border-radius: 3px;
+  border: 2px solid var(--link-color);
   cursor: pointer;
   z-index: 50;
 }
@@ -226,7 +229,7 @@ aside.thumbs {
 
 /* ---------- Footer ---------- */
 footer {
-    background: rgba(21,67,96,0.99);
+    background: var(--nav-bar-color);
     border-radius: 3px;
     color: white;
     display: flex;
@@ -261,9 +264,9 @@ footer {
   bottom: 40px; /* Place the button at the bottom of the page */
   right: 20px; /* Place the button 30px from the right */
   z-index: 100; /* Make sure it is on top ov everything */
-  border: 10px solid white;
+  border: 6px solid white;
   outline: none; /* Remove outline */
-  background-color: rgba(26,82,118,0.99);
+  background-color: var(--nav-bar-color);
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 10px; /* Some padding around text*/
@@ -272,7 +275,7 @@ footer {
 }
 
 #toTop:hover {
-   background-color: rgba(36,113,163,0.99);
+   background-color: var(--nav-bar-highlight-color);
    color: black;
 }
 
