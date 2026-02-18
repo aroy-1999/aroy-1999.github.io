@@ -173,6 +173,12 @@ section h2 {
   font-size: 140%;
 }
 
+.title{
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+}
+
 .subTitle{
     font-size: 75%;
 }
