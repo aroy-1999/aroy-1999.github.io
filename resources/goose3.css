@@ -442,7 +442,6 @@ footer {
     font-weight: normal;
     background-color: #606060;
     text-align: center;
-    padding: 6px;
 }
 
 .goose-table tbody {
@@ -454,7 +453,6 @@ footer {
 }
 
 .goose-table td {
-    padding: 6px;
     vertical-align: top;
     border-bottom: 1px solid #eaeaea;
 }
@@ -469,7 +467,6 @@ footer {
     height: 70px;
     object-fit: cover;
     border-radius: 10%;
-    margin-bottom: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
@@ -531,7 +528,7 @@ footer {
         text-align: center;
         min-width: 100px;
     }
-    method-cell img {
+    .method-cell img {
         height: 40px;
     }
 }
