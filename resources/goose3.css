@@ -39,7 +39,7 @@ body::before {
   position: fixed;
   inset: 0; /* shorthand for top:0; left:0; right:0; bottom:0 */
   background: url("../images/mosaic.jpg") center center / cover no-repeat;
-  opacity: 0.75; /* adjust transparency here */
+  opacity: 0.70; /* adjust transparency here */
   z-index: -2;
 }
 
