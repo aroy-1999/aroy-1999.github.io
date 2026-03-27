@@ -43,8 +43,8 @@ body::before {
   z-index: -2;
 }
 
-  /* Overlay */
-  .overlay {
+/* Overlay */
+.overlay {
     position:fixed;
     top:0;
     left:0;
@@ -54,9 +54,9 @@ body::before {
     opacity:0;
     pointer-events:none;
     transition:opacity 0.3s ease;
-  }
+}
 
-  .overlay.active {
+.overlay.active {
     opacity:1;
     pointer-events:auto;
   }
@@ -114,6 +114,11 @@ nav a:hover {
     color: white;
     font-size:24px;
     cursor:pointer;
+}
+div.hamburgerMenu:hover {
+   border-radius: 3px;
+   background-color: var(--nav-bar-highlight-color);
+   color: black;
 }
 
 /* ---------- Layout ---------- */
@@ -544,7 +549,7 @@ footer {
     header {
         background-color: var(--nav-bar-color);
         /*height: calc(var(--nav-height) * 0.5)px;*/
-        height: 70px;
+        height:70px;
     }
     nav {
         display:none;
@@ -554,18 +559,21 @@ footer {
         right:0;
         width:200px;
         padding:10px;
-        font-size: 80%;
-        border-radius: 3px;
+        font-size:80%;
+        border-radius:3px;
     }
     nav.active {
         display:flex;
         background-color: var(--nav-bar-color);;
     }
-    .hamburgerMenu { display:block; }
+    .hamburgerMenu {
+        display:block;
+        font-size:100%;
+    }
     .container { flex-direction:column; }
 
     main {
-        max-width: 550px;
+        max-width:550px;
     }
     .myLogo{
         height: 60px;
