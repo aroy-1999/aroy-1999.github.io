@@ -20,8 +20,8 @@ function initMovingGeese(){
         let speed = 0.1 + Math.random() * 0.3;       // slightly different speeds
 
         function randomHeight() {
-            const nav = document.getElementById('nav');
-            return Math.random() * nav.offsetHeight * 0.95;
+            const myHeader = document.getElementById("myHeader");
+            return Math.random() * myHeader.offsetHeight * 0.95;
         }
 
         thumb.style.top = randomHeight() + "px";
@@ -104,4 +104,9 @@ function initSlideShow(){
 
     // Initialize
     showSlide(slideIndex);
+}
+
+function toggleHamburgerMenu() {
+    document.getElementById('nav').classList.toggle('active');
+    document.getElementById('overlay').classList.toggle('active');
 }

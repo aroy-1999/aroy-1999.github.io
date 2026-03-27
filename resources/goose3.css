@@ -23,7 +23,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
   color: var(--body-text-color);
   line-height: 1.6;
   min-height: 100vh;
@@ -43,6 +43,24 @@ body::before {
   z-index: -2;
 }
 
+  /* Overlay */
+  .overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.3);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 0.3s ease;
+  }
+
+  .overlay.active {
+    opacity:1;
+    pointer-events:auto;
+  }
+
 .goose {
     position: absolute;
     width: 20px;
@@ -51,12 +69,11 @@ body::before {
     z-index: 9999;
 }
 
-/* ---------- Top Navigation ---------- */
-.top-nav {
+/* ---------- HEADER ---------- */
+header {
   position: sticky;
   top: 0;
   height: var(--nav-height);
-  font-size: 120%;
   line-height: 1.0; /* space between text lines */
   display: flex;
   align-items: center;
@@ -68,33 +85,35 @@ body::before {
   margin: var(--footer-margin);
 }
 
-.top-nav .myLogo {
-    display: flex;
-}
-
 .myLogo {
     height: calc(var(--nav-height) - 10px);
     width: auto;
     border-radius: 3px;
     cursor: pointer;
-  }
-
-.top-nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
 }
 
-.top-nav a {
+nav {
+    display:flex;
+    gap:1.5rem;
+    align-items:center;
+    font-size: 110%;
+}
+nav a {
     text-decoration: none;
     color: white;
 }
-
-.top-nav a:hover {
+nav a:hover {
    border-radius: 3px;
    background-color: var(--nav-bar-highlight-color);
    color: black;
+}
+
+ /* HAMBURGER MENU */
+.hamburgerMenu {
+    display:none;
+    color: white;
+    font-size:24px;
+    cursor:pointer;
 }
 
 /* ---------- Layout ---------- */
@@ -308,7 +327,7 @@ footer {
   width:100%;
   font-size:100%;
 }
-.active, .collapsible:hover{
+.collapsible.active, .collapsible:hover{
   color:white;
   background-color: #909090;
 }
@@ -500,6 +519,7 @@ footer {
   }
 }
 
+/* TABLET */
 @media (max-width: 900px) {
   .pageBlog {
     grid-template-columns: 1fr;
@@ -518,21 +538,39 @@ footer {
   }
 }
 
-@media (max-width: 650px) {
+/* MOBILE */
+@media(max-width:670px) {
+
+    header {
+        background-color: var(--nav-bar-color);
+        /*height: calc(var(--nav-height) * 0.5)px;*/
+        height: 70px;
+    }
+    nav {
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:10px;
+        right:0;
+        width:200px;
+        padding:10px;
+        font-size: 80%;
+        border-radius: 3px;
+    }
+    nav.active {
+        display:flex;
+        background-color: var(--nav-bar-color);;
+    }
+    .hamburgerMenu { display:block; }
+    .container { flex-direction:column; }
+
     main {
-        max-width: 500px;
-    }
-    .top-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .top-nav a {
-        font-size: 70%;
+        max-width: 550px;
     }
     .myLogo{
-        height: 40px;
-        width: auto;
+        height: 60px;
     }
+
     .myVideo{
         width:100%
     }

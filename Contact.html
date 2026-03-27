@@ -19,21 +19,21 @@
 <img class="goose" src="images/gooseSilhouette.png">
 
 <!-- Top Nav -->
-<nav id="nav" class="top-nav">
+<div class="overlay" id="overlay" onclick="toggleHamburgerMenu()"></div>
+<header id="myHeader">
     <img class="myLogo" alt="smart goose deterrent system logo" src="images/logo.png" title="SGDS"
          onclick="window.location.href='/'">
-    <ul>
-        <li></li>
-        <li><a href='/'>Home</a></li>
-        <li><a href='HowItWorks.html'>How it Works</a></li>
-        <li><a href='Blog.html'>Blog</a></li>
-        <li><a href='InTheNews.html'>In The News</a></li>
-        <li><a href='OtherDeterrents.html'>Other Deterrents</a></li>
-        <li><a href='FAQ.html'>FAQ</a></li>
-        <li><a href='Contact.html'>Contact</a></li>
-        <li><a href='Contact.html'> </a></li>
-    </ul>
-</nav>
+    <div class="hamburgerMenu" onclick="toggleHamburgerMenu()">&#9776; &nbsp;</div>
+    <nav id="nav">
+        <a href='/'>Home</a>
+        <a href='HowItWorks.html'>How it Works</a>
+        <a href='Blog.html'>Blog</a>
+        <a href='InTheNews.html'>In The News</a>
+        <a href='OtherDeterrents.html'>Other Deterrents</a>
+        <a href='FAQ.html'>FAQ</a>
+        <a href='Contact.html'>Contact &nbsp;</a>
+    </nav>
+</header>
 
 <!-- Page -->
 <div class="page">
