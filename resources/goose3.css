@@ -55,7 +55,6 @@ body::before {
     pointer-events:none;
     transition:opacity 0.3s ease;
 }
-
 .overlay.active {
     opacity:1;
     pointer-events:auto;
@@ -108,7 +107,7 @@ nav a:hover {
    color: black;
 }
 
- /* HAMBURGER MENU */
+/* HAMBURGER MENU */
 .hamburgerMenu {
     display:none;
     color: white;
@@ -121,7 +120,7 @@ div.hamburgerMenu:hover {
    color: black;
 }
 
-/* ---------- Layout ---------- */
+/* ---------- 3 COLUMN LAYOUT ---------- */
 .page {
     display: grid;
     flex: 1;
@@ -532,6 +531,12 @@ footer {
   .page {
     grid-template-columns: 1fr;
   }
+  header {
+    height: calc(var(--nav-height) * 0.8 - 0px);
+  }
+  .myLogo{
+    height: calc(var(--nav-height) * 0.8 - 10px);
+  }
   aside.toc {
     display: none;
   }
@@ -547,9 +552,10 @@ footer {
 @media(max-width:670px) {
 
     header {
-        background-color: var(--nav-bar-color);
-        /*height: calc(var(--nav-height) * 0.5)px;*/
-        height:70px;
+        height: calc(var(--nav-height) * 0.7 - 0px);
+    }
+    .myLogo{
+        height: calc(var(--nav-height) * 0.7 - 10px);
     }
     nav {
         display:none;
@@ -559,7 +565,7 @@ footer {
         right:0;
         width:200px;
         padding:10px;
-        font-size:80%;
+        font-size:100%;
         border-radius:3px;
     }
     nav.active {
@@ -571,14 +577,9 @@ footer {
         font-size:100%;
     }
     .container { flex-direction:column; }
-
     main {
         max-width:550px;
     }
-    .myLogo{
-        height: 60px;
-    }
-
     .myVideo{
         width:100%
     }
@@ -586,7 +587,6 @@ footer {
         font-size: 70%;
     }
     .method-cell {
-        text-align: center;
         min-width: 100px;
     }
     .method-cell img {
