@@ -1,7 +1,10 @@
-
+/* use https://www.phpkobo.com/css-obfuscator, then copy result to style.js*/
 :root {
   --nav-height: 125px;
+  --logo-height:115px;
+
   --footer-height: 35px;
+  --footer-image-height: 27px;
   --footer-padding: 4px;
   --footer-margin: 5px;
 
@@ -85,7 +88,7 @@ header {
 }
 
 .myLogo {
-    height: calc(var(--nav-height) - 10px);
+    height: var(--logo-height);
     width: auto;
     border-radius: 3px;
     cursor: pointer;
@@ -105,6 +108,18 @@ nav a:hover {
    border-radius: 3px;
    background-color: var(--nav-bar-highlight-color);
    color: black;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.myLogin {
+    height: 25px;
+    width: auto;
+    filter: invert(100%);
+    cursor: pointer;
 }
 
 /* HAMBURGER MENU */
@@ -280,12 +295,12 @@ footer {
 
 .footer-left img {
     width: auto;
-    height: calc( var(--footer-height) - 2 * var(--footer-padding) );
+    height: var(--footer-image-height);
     object-fit: cover;
     filter: invert(100%);
     cursor: pointer;
-    padding-top: calc(var(--footer-padding) + 1px);
-    padding-bottom: calc(var(--footer-padding) - 1px);
+    padding-top: var(--footer-padding);
+    padding-bottom: var(--footer-padding);
     padding-left: 10px;
 }
 
