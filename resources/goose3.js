@@ -17,7 +17,7 @@ function initMovingGeese(){
 
     thumbs.forEach((thumb, index) => {
         let x = -Math.random() * 100;  // stagger starting positions
-        let speed = 0.1 + Math.random() * 0.3;       // slightly different speeds
+        let speed = 0.1 + Math.random() * 0.25;       // slightly different speeds
 
         function randomHeight() {
             const myHeader = document.getElementById("myHeader");
